@@ -2,7 +2,8 @@ import { LightningElement } from 'lwc';
 
 export default class App extends LightningElement {
 
-    isLoading = true;
+    /* isLoading = true; */
+    isLoading = false;
 
     connectedCallback(){
         this.loadComponent();

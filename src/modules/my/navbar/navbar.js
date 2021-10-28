@@ -12,7 +12,7 @@ export default class Navbar extends LightningElement {
         return this.activePage;
     }
 
-    connectedCallback(){
+/*     connectedCallback(){
         console.log('connectedCallback: ', this.template.querySelector(this.activePage));
 
         if(!this.template.querySelector(this.activePage)) return;
@@ -23,7 +23,7 @@ export default class Navbar extends LightningElement {
 
     renderedCallback(){
         console.log('renderedCallback: ', this.template.querySelector(this.activePage));
-    }
+    } */
 
     handleClick(event){
         var clickedItem = event.currentTarget.dataset.name;
