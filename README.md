@@ -12,7 +12,7 @@ It is built using [LWC Open Source](https://lwc.dev/) and [Salesforce Lightning 
 
 ## Authors
 
-* **Lucas Andrade** - *developer*
-* **Oliver Hernandez** - *developer*
+* **Lucas Andrade** - *lead developer*
+* **Oliver Hernandez** - *lead developer*
 * **Pedro Botelho** - *developer*
 * **Tiago Pimentel** - *developer*

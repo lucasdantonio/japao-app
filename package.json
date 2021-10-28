@@ -24,9 +24,9 @@
         "prettier": "^2.2.1"
     },
     "engines": {
-        "node": ">=10.13.0",
-        "npm": ">=6.4.1",
-        "yarn": ">=1.9.4"
+        "node": "13.1.0",
+        "npm": "6.12.1",
+        "yarn": "1.19.1"
     },
     "homepage": "https://github.com/lucasdantonio/japao-app",
     "husky": {
