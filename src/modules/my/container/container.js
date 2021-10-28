@@ -28,7 +28,7 @@ export default class Container extends LightningElement {
     }
 
     get showNavbar(){
-        return ['home','cart','calendar'].includes(this.activePage);
+        return ['home','cart','calendar','profile'].includes(this.activePage);
     }
 
 }
