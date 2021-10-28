@@ -1,13 +1,34 @@
 <template>
 
-    <lightning-layout>
-        <lightning-layout-item size="6" padding="around-small">
-            teste
-        </lightning-layout-item>
-
-        <lightning-layout-item size="6" padding="around-small">
-            teste2
-        </lightning-layout-item>
-    </lightning-layout>
+    <div class="navbar slds-grid">
+        <a href="#" data-name="home" class="slds-col active" onclick={handleClick}>
+            <lightning-icon 
+                icon-name="utility:home" 
+                alternative-text="Início" 
+                title="Início">
+            </lightning-icon>
+        </a>
+        <a href="#" data-name="cart" class="slds-col" onclick={handleClick}>
+            <lightning-icon 
+                icon-name="utility:cart" 
+                alternative-text="Carrinho" 
+                title="Carrinho">
+            </lightning-icon>
+        </a>
+        <a href="#" data-name="calendar" class="slds-col" onclick={handleClick}>
+            <lightning-icon 
+                icon-name="utility:monthlyview" 
+                alternative-text="Calendário" 
+                title="Calendário">
+            </lightning-icon>
+        </a>
+        <a href="#" data-name="profile" class="slds-col" onclick={handleClick}>
+            <lightning-icon 
+                icon-name="utility:user" 
+                alternative-text="Perfil" 
+                title="Perfil">
+            </lightning-icon>
+        </a>
+    </div>
 
 </template>

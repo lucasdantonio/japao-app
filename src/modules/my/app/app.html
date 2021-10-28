@@ -1,3 +1,11 @@
 <template>
-    <my-home></my-home>
+
+    <template if:false={isLoading}>
+        <my-container></my-container>
+    </template>
+
+    <template if:true={isLoading}>
+        <my-loading></my-loading>
+    </template>
+
 </template>

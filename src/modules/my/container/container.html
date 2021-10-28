@@ -1,0 +1,26 @@
+<template>
+
+    <template if:true={showHome}>
+        <my-home></my-home>
+    </template>
+
+    <template if:true={showCart}>
+        <my-cart></my-cart>
+    </template>
+
+    <template if:true={showCalendar}>
+        <my-calendar></my-calendar>
+    </template>
+
+    <template if:true={showProfile}>
+        <my-profile></my-profile>
+    </template>
+
+    <template if:true={showNavbar}>
+        <my-navbar onpagechange={handlePageChange}></my-navbar>
+    </template>
+    
+    <!-- <my-login></my-login>
+    <my-register></my-register>
+    <my-loading></my-loading> -->
+</template>
