@@ -1,1 +1,1 @@
-web: yarn watch
+web: npm run watch
