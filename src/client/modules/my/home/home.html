@@ -1,0 +1,69 @@
+<template>
+
+    <lightning-layout multiple-rows="true">
+
+        <!-- Search Card -->
+        <lightning-layout-item size="12">
+
+            <article class="slds-card">
+                <div class="slds-card__body slds-card__body_inner">
+                    
+                    <lightning-input 
+                        type="search" 
+                        label="Pesquisar" 
+                        variant="label-hidden"
+                        placeholder="Pesquisar produtos e padarias">
+                    </lightning-input>
+
+                </div>
+            </article>
+
+        </lightning-layout-item>
+
+        <!-- Date and Promotion -->
+        <lightning-layout-item size="12" padding="around-small">
+
+            <article class="slds-card data-and-promotion">
+                <div class="slds-card__body slds-card__body_inner">
+                    
+                    <lightning-layout vertical-align="center">
+                        <lightning-layout-item size="6" padding="around-small">
+                            {today}
+                        </lightning-layout-item>
+                        <lightning-layout-item size="6" padding="around-small" alignment-bump="right">
+                            <lightning-badge 
+                                label="Promoções do dia" 
+                                icon-name="custom:custom11"
+                                class="promotion-badge">
+                            </lightning-badge>
+                        </lightning-layout-item>
+                    </lightning-layout>
+
+                </div>
+            </article>
+
+        </lightning-layout-item>
+
+        <!-- Carousel -->
+        <lightning-layout-item size="12">
+            <ui-carousel></ui-carousel>
+        </lightning-layout-item>
+
+        <!-- Categories and Itens -->
+        <lightning-layout-item size="12">
+
+            <article class="slds-card">
+                <div class="slds-card__body slds-card__body_inner slds-p-around_small">
+                    
+                    <ui-categories></ui-categories>
+
+                    <ui-items></ui-items>
+
+                </div>
+            </article>
+
+        </lightning-layout-item>
+
+    </lightning-layout>
+
+</template>

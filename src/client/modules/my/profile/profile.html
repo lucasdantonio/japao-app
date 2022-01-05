@@ -1,0 +1,95 @@
+<template>
+
+    <lightning-layout multiple-rows="true" 
+                      horizontal-align="center" 
+                      vertical-align="center" 
+                      class="content center">
+
+        <!-- Picture -->
+        <lightning-layout-item size="12">
+
+            <template if:true={isDetails}>
+                <my-detail 
+                    name={name} 
+                    picture={picture}>
+                </my-detail>
+            </template>
+
+            <template if:true={isNotifications}>
+                <my-notifications>
+                </my-notifications>
+            </template>
+
+            <template if:true={isPaymentMethods}>
+                <my-payment-methods>
+                </my-payment-methods>
+            </template>
+
+            <template if:true={isFavorites}>
+                <my-favorites>
+                </my-favorites>
+            </template>
+
+            <template if:true={isAddress}>
+                <my-address>
+                </my-address>
+            </template>
+
+            <template if:true={isSettings}>
+                <my-settings>
+                </my-settings>
+            </template>
+
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12">
+
+            <lightning-vertical-navigation selected-item={selectedItem}
+                                           compact="false" 
+                                           class="slds-nav-vertical"
+                                           onselect={handleSelect}>
+                <lightning-vertical-navigation-section>
+                    <lightning-vertical-navigation-item-icon
+                        label="Meu perfil"
+                        name="details"
+                        icon-name="utility:identity">
+                    </lightning-vertical-navigation-item-icon>
+    
+                    <lightning-vertical-navigation-item-icon
+                        label="Notificações"
+                        name="notifications"
+                        icon-name="utility:notification">
+                    </lightning-vertical-navigation-item-icon>
+    
+                    <lightning-vertical-navigation-item-icon
+                        label="Formas de pagamento"
+                        name="paymentMethods"
+                        icon-name="utility:money">
+                    </lightning-vertical-navigation-item-icon>
+    
+                    <lightning-vertical-navigation-item-icon
+                        label="Favoritos"
+                        name="favorites"
+                        icon-name="utility:favorite">
+                    </lightning-vertical-navigation-item-icon>
+    
+                    <lightning-vertical-navigation-item-icon
+                        label="Endereço"
+                        name="address"
+                        icon-name="utility:world">
+                    </lightning-vertical-navigation-item-icon>
+
+                    <lightning-vertical-navigation-item-icon
+                        label="Configurações"
+                        name="settings"
+                        icon-name="utility:settings">
+                    </lightning-vertical-navigation-item-icon>
+                </lightning-vertical-navigation-section>
+    
+            </lightning-vertical-navigation>
+
+        </lightning-layout-item>
+
+    </lightning-layout>
+
+</template>

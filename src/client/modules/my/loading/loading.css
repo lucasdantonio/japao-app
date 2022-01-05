@@ -1,0 +1,18 @@
+.content {
+    background-color: white !important;
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo {
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+}
+
+.logo img {
+    position: absolute;
+    top: 25%;
+    left: 25vw;
+    width: 50%;
+}

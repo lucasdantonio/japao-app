@@ -1,0 +1,80 @@
+<template>
+
+    <ui-alert 
+        message="Logado com sucesso!"
+        severity="success"
+        show-alert={success}>
+    </ui-alert>
+
+    <lightning-layout multiple-rows="true" 
+                      horizontal-align="center" 
+                      vertical-align="center" 
+                      class="content">
+
+        <lightning-layout-item size="12">
+            <div class="logo">
+                <img src="../../../resources/japao-nobg.png"/>
+            </div>
+        </lightning-layout-item>
+
+        <template if:true={error}>
+            <lightning-layout-item size="12">
+                <p>Erro! Preencha os campos: Usuário e Senha!</p>
+            </lightning-layout-item>
+        </template>
+
+        <lightning-layout-item size="12">
+            <lightning-input
+                type="text"
+                label="Usuário"
+                placeholder="Digite seu usuário.."
+                value={usuario}
+                onchange={genericOnChange} 
+                name="usuario">
+            </lightning-input>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12">
+            <lightning-input
+                type="password"
+                label="Senha"
+                placeholder="Digite sua senha.."
+                value={senha} 
+                onchange={genericOnChange} 
+                name="senha">
+            </lightning-input>
+        </lightning-layout-item>
+
+        <lightning-layout-item size="12" padding="around-large">
+            <lightning-layout 
+                horizontal-align="center" 
+                vertical-align="center">
+
+                <lightning-layout-item size="6">
+
+                    <lightning-button 
+                        label="Registrar-se" 
+                        onclick={handleRegister}
+                        disabled>
+                    </lightning-button>
+
+                </lightning-layout-item>
+
+                <lightning-layout-item size="6" padding="horizontal-medium">
+
+                    <lightning-button 
+                        label="Entrar" 
+                        onclick={handleLogin}>
+                    </lightning-button>
+
+                </lightning-layout-item>
+
+            </lightning-layout>
+        </lightning-layout-item>
+
+    </lightning-layout>
+
+
+    
+
+</template>

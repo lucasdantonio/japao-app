@@ -1,0 +1,19 @@
+<template>
+    
+    <div class="slds-p-around_medium item-bg">
+        <lightning-tile label={nome} href="#" type="media">
+            <lightning-avatar 
+                slot="media" 
+                src={imagem} 
+                fallback-icon-name="utility:person" 
+                alternative-text={nome}
+                class="img">
+            </lightning-avatar>
+            <ul class="slds-list_horizontal slds-has-dividers_right">
+                <li class="slds-item">{estrelas} &bullet; {proximo}</li>
+                <li class="slds-item"></li>
+            </ul>
+        </lightning-tile>
+    </div>
+
+</template>

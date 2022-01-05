@@ -1,0 +1,78 @@
+<template>
+
+    <div class="navbar slds-grid">
+        <a href="#" data-name="home" class="slds-col active" onclick={handleClick}>
+            <lightning-layout multiple-rows="true">
+
+                <lightning-layout-item size="12">
+                    <lightning-icon 
+                        icon-name="utility:home" 
+                        alternative-text="Início" 
+                        size="small"
+                        title="Início">
+                    </lightning-icon>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="12">
+                    Início
+                </lightning-layout-item>
+
+            </lightning-layout>
+        </a>
+        <a href="#" data-name="cart" class="slds-col" onclick={handleClick}>
+            <lightning-layout multiple-rows="true">
+
+                <lightning-layout-item size="12">
+                    <lightning-icon 
+                        icon-name="utility:cart" 
+                        alternative-text="Carrinho" 
+                        size="small"
+                        title="Carrinho">
+                    </lightning-icon>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="12">
+                    Carrinho
+                </lightning-layout-item>
+
+            </lightning-layout>
+        </a>
+        <a href="#" data-name="calendar" class="slds-col" onclick={handleClick}>
+            <lightning-layout multiple-rows="true">
+
+                <lightning-layout-item size="12">
+                    <lightning-icon 
+                        icon-name="utility:monthlyview" 
+                        alternative-text="Calendário"
+                        size="small" 
+                        title="Calendário">
+                    </lightning-icon>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="12">
+                    Calendário
+                </lightning-layout-item>
+
+            </lightning-layout>
+        </a>
+        <a href="#" data-name="profile" class="slds-col" onclick={handleClick}>
+            <lightning-layout multiple-rows="true">
+
+                <lightning-layout-item size="12">
+                    <lightning-icon 
+                        icon-name="utility:user" 
+                        alternative-text="Perfil" 
+                        size="small"
+                        title="Perfil">
+                    </lightning-icon>
+                </lightning-layout-item>
+
+                <lightning-layout-item size="12">
+                    Perfil
+                </lightning-layout-item>
+
+            </lightning-layout>
+        </a>
+    </div>
+
+</template>

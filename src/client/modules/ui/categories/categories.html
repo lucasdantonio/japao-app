@@ -1,0 +1,20 @@
+<template>
+
+    <span class="title">
+        Categorias
+    </span>
+    <div class="wrapper">
+
+        <template for:each={categories} for:item="category" for:index="index">
+            <div key={category.id}>
+                <ui-category
+                    id={category.id}
+                    nome={category.nome}
+                    imagem={category.imagem}>
+                </ui-category>
+            </div>
+        </template>
+        
+    </div>
+
+</template>
