@@ -12,3 +12,15 @@
 .slds-nav-vertical {
     top: 15vh;
 }
+* {
+    --primary: #ff1720;
+    --secondary: #a39797;
+}
+.c-header {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+.red {
+    background-color: var(--primary);
+}

@@ -1,0 +1,18 @@
+* {
+    --primary: #ff1720;
+    --secondary: #a39797;
+}
+.c-button {
+    padding: 10px;
+}
+.c-button button {
+    min-height: 50px;
+}
+.c-header {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+.red {
+    background-color: var(--primary);
+}

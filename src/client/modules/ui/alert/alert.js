@@ -3,10 +3,10 @@ import 'alert.css';
 
 export default class Alert extends LightningElement {
     
-    @api message = '';
-    @api severity = '';
+    @api message = 'Logado com sucesso!';
+    @api severity = 'success';
     @api isclosable = false;
-    @track showAlert = true;
+    @api showAlert = false;
 
     get isError(){
         return this.severity === 'error';

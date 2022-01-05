@@ -1,9 +1,9 @@
 <template>
 
     <ui-alert 
-        message="Logado com sucesso!"
-        severity="success"
-        show-alert={success}>
+        message={message}
+        severity={severity}
+        show-alert={error}>
     </ui-alert>
 
     <lightning-layout multiple-rows="true" 
@@ -17,11 +17,11 @@
             </div>
         </lightning-layout-item>
 
-        <template if:true={error}>
+        <!-- <template if:true={error}>
             <lightning-layout-item size="12">
                 <p>Erro! Preencha os campos: Usuário e Senha!</p>
             </lightning-layout-item>
-        </template>
+        </template> -->
 
         <lightning-layout-item size="12">
             <lightning-input

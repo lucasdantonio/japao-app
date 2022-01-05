@@ -1,5 +1,59 @@
 <template>
+    <div class="slds-grid slds-wrap">
 
-    Cart
+        <div class="slds-col slds-size_12-of-12">
+            <article class="slds-card red">
+                <div class="slds-card__body slds-card__body_inner red">
+                    
+                    <span class="c-header  slds-align_absolute-center">
+                        Carrinho
+                    </span>
+    
+                </div>
+            </article>
+        </div>
 
+        <template if:true={items}>
+            <template for:each={items} for:item="item">
+               <div class="slds-col slds-size_12-of-12 slds-p-horizontal_x-small slds-p-top_xx-small" key={item.id}>
+                    <!-- {item.name} -->
+                    <my-cart-item
+                        data-name={item.id}
+                        name={item.name}
+                        quantity={item.quantity}
+                        unit-price={item.unitPrice}
+                        image={item.image}
+                        onremove={handleRemove}>
+                    </my-cart-item>
+               </div>
+            </template>
+            <div class="slds-col slds-size_12-of-12 slds-p-horizontal_x-small slds-p-top_xx-small">
+                <span class="slds-align_absolute-center" style="font-size: 16px;">
+                        <strong>
+                            Total:&nbsp;R$&nbsp;
+                        </strong> 
+                        {total}
+                </span>
+            </div>
+            <div class="slds-col slds-size_12-of-12 slds-p-horizontal_x-small slds-p-top_xx-small slds-align_absolute-center">
+                <lightning-button 
+                    label="Limpar carrinho" 
+                    title="Looks like a link" 
+                    onclick={handleClick} 
+                    icon-name="utility:delete" 
+                    class="slds-m-left_x-small c-button">
+                </lightning-button>
+                <lightning-button 
+                    label="Finalizar pedido" 
+                    title="Looks like a link" 
+                    onclick={handleClick} 
+                    icon-name="utility:forward" 
+                    class="slds-m-left_x-small c-button">
+                </lightning-button>
+            </div>
+        </template>
+        <template if:false={items}>
+            Carrinho vazio
+        </template>
+    </div>
 </template>

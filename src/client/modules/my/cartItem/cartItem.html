@@ -1,0 +1,33 @@
+<template>
+
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <img src={image} style="width:64px; height:64px;">
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <span>{name}</span>
+                    </h2>
+                    &nbsp;x{quantity}&nbsp;-&nbsp;R$&nbsp;{unitPrice}
+                </div>
+                <div class="slds-no-flex">
+                    <lightning-button-icon 
+                        icon-name="utility:dash" 
+                        alternative-text="Remover" 
+                        title="Remover"
+                        onclick={handleRemove}>
+                    </lightning-button-icon>
+                    <lightning-button-icon 
+                        icon-name="utility:add" 
+                        alternative-text="Adicionar" 
+                        title="Adicionar"
+                        onclick={handleAdd}>
+                    </lightning-button-icon>
+                </div>
+            </header>
+        </div>
+    </article>
+
+</template>

@@ -5,6 +5,8 @@ export default class Login extends LightningElement {
     usuario;
     senha;
     error = false;
+    message = '';
+    severity = '';
 
     alreadyConnected = false;
     connectedCallback(){
@@ -19,10 +21,29 @@ export default class Login extends LightningElement {
 
         if(!this.usuario || !this.senha) {
             this.error = true;
+            this.severity = 'warning';
+            this.message = 'Preencha os campos: Usuário e Senha!';
             return;
         }
 
         success = false;
+
+        if(this.usuario == 'Lucas' && this.senha == '123'){
+            this.severity = 'success';
+            this.message = 'Logado com sucesso!';
+            this.error = true;
+            
+            const selectEvent = new CustomEvent('login', {
+                detail: true
+            });
+            this.dispatchEvent(selectEvent);
+            return;
+        }
+
+        this.message = 'Usuário e/ou senha incorreto(s)';
+        this.severity = 'error';
+        this.error = true;
+        return;
 
         const userObject = await this.login(this.usuario, this.senha);
         console.log('userObject: ', userObject);
