@@ -3,7 +3,8 @@ import { LightningElement } from 'lwc';
 export default class App extends LightningElement {
 
     isLoading = true;
-    isLogged = false;
+    /* isLogged = false; */
+    isLogged = true;
     /* isLoading = false; */
 
     connectedCallback(){
