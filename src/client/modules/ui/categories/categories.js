@@ -2,6 +2,11 @@ import { LightningElement } from 'lwc';
 
 const _categories = [
     {
+        "id": "0",
+        "nome": "Todos",
+        "imagem": "../../../resources/android-chrome-192x192.png"
+    },
+    {
         "id": "1",
         "nome": "Pães",
         "imagem": "../../../resources/pao-frances.jpg"
@@ -30,4 +35,15 @@ const _categories = [
 
 export default class Categories extends LightningElement {
     categories = _categories;
+
+    handleSelect(event){
+        const category = event.detail;
+        event.preventDefault();
+
+        const selectEvent = new CustomEvent('selectcategory', {
+            detail: category
+        });
+
+        this.dispatchEvent(selectEvent);
+    }
 }

@@ -1,7 +1,7 @@
 import { LightningElement } from 'lwc';
 
 export default class Container extends LightningElement {
-    activePage = 'calendar';
+    activePage = 'home';
     isRendering = false;
 
     handlePageChange(event){

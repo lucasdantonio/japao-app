@@ -1,5 +1,42 @@
 <template>
 
-    Address
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_12-of-12 slds-p-horizontal_x-small slds-p-top_xx-small">
+            <article class="slds-card">
+                <div class="slds-card__header slds-grid">
+                    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                        <div class="slds-media__figure">
+                            <img src="../../../resources/casa.png" style="width:64px; height:64px;">
+                        </div>
+                        <div class="slds-media__body">
+                            <h2 class="slds-card__header-title">
+                                <span>Casa (Principal)</span>
+                            </h2>
+                            Av. Afonso Pena, nº 128 - Apto 24 - Boqueirão (Santos)
+                        </div>
+                        <div class="slds-no-flex">
+                            <lightning-button-icon 
+                                icon-name="utility:delete" 
+                                alternative-text="Remover" 
+                                title="Remover"
+                                onclick={handleRemove}>
+                            </lightning-button-icon>
+                        </div>
+                    </header>
+                </div>
+            </article>
+        </div>
+
+        <div class="slds-col slds-size_12-of-12 slds-p-horizontal_x-small slds-p-top_xx-small slds-align_absolute-center">
+            <lightning-button 
+                label="Adicionar novo endereço" 
+                title="Adicionar novo endereço" 
+                onclick={handleClick} 
+                icon-name="utility:add" 
+                class="slds-m-left_x-small c-button">
+            </lightning-button>
+        </div>
+
+    </div>
 
 </template>

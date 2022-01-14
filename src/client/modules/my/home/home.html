@@ -55,9 +55,8 @@
             <article class="slds-card">
                 <div class="slds-card__body slds-card__body_inner slds-p-around_small">
                     
-                    <ui-categories></ui-categories>
-
-                    <ui-items></ui-items>
+                    <ui-categories onselectcategory={handleSelectCategory}></ui-categories>
+                    <ui-items category={category}></ui-items>
 
                 </div>
             </article>

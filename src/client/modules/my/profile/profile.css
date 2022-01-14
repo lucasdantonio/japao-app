@@ -1,4 +1,4 @@
-.content {
+/* .content {
     width: 100vw;
     height: 100vh;
 }
@@ -7,10 +7,15 @@
     width: 100vw;
     height: 100vh;
     position: relative;
-}
-
+} */
+/* .content {
+    margin-top: 5vh;
+} */
 .slds-nav-vertical {
-    top: 15vh;
+    /* top: 15vh; */
+    position: absolute;
+    width: 100%;
+    bottom: 10vh;
 }
 * {
     --primary: #ff1720;

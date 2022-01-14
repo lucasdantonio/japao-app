@@ -2,7 +2,7 @@ import { LightningElement, track } from 'lwc';
 
 export default class Profile extends LightningElement {
     
-    name = 'User';
+    name = 'Lucas';
     picture = '../../../resources/default-user-image.png';
     @track selectedItem = 'details';
 

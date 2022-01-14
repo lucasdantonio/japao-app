@@ -1,18 +1,34 @@
 <template>
 
-    <lightning-layout multiple-rows="true" 
-                      horizontal-align="center" 
-                      vertical-align="center">
-
-        <!-- Picture -->
-        <lightning-layout-item size="12">
-
+    <!-- <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_12-of-12 slds-p-horizontal_x-small slds-p-top_xx-small">
             <span class="profile">
                 <img alt={userName} 
                      src={userPicture} 
                      title={userName} />
             
                 {userName}
+            </span>
+        </div>
+    </div> -->
+    <!-- Picture -->
+    <lightning-layout multiple-rows="true" 
+                      horizontal-align="center" 
+                      vertical-align="center">
+
+        
+        <lightning-layout-item size="12">
+
+            <span class="profile">
+                <div>
+                    <img alt={userName} 
+                         src={userPicture} 
+                         title={userName} />
+                </div>
+                <div>
+                    {userName}
+                </div>
+            
             </span>
 
         </lightning-layout-item>

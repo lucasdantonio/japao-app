@@ -1,4 +1,10 @@
 <template>
+
+    <ui-alert 
+        message={message}
+        severity={severity}
+        show-alert={error}>
+    </ui-alert>
     
     <div class="slds-p-around_medium item-bg">
         <lightning-tile label={nome} href="#" type="media">
@@ -10,9 +16,17 @@
                 class="img">
             </lightning-avatar>
             <ul class="slds-list_horizontal slds-has-dividers_right">
-                <li class="slds-item">{estrelas} &bullet; {proximo}</li>
-                <li class="slds-item"></li>
+                <!-- <li class="slds-item">{estrelas} &bullet; {proximo}</li>
+                <li class="slds-item"></li> -->
             </ul>
+            <div class="slds-no-flex" style="float: right;">
+                <lightning-button-icon 
+                    icon-name="utility:add" 
+                    alternative-text="Adicionar" 
+                    title="Adicionar"
+                    onclick={handleAdd}>
+                </lightning-button-icon>
+            </div>
         </lightning-tile>
     </div>
 

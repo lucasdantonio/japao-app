@@ -3,7 +3,7 @@
     <article class="slds-card">
         <div class="slds-card__body slds-card__body_inner slds-p-around_small">
 
-            <template for:each={items} for:item="item" for:index="index">
+            <template if:true={items} for:each={items} for:item="item" for:index="index">
                 <div key={item.id}>
                     <ui-item
                         id={item.id}
